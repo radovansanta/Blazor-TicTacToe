@@ -90,7 +90,7 @@ using TicTacToe.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "/Users/radovansanta/RiderProjects/TicTacToe/TicTacToe/Shared/NavMenu.razor"
+#line 18 "/Users/radovansanta/RiderProjects/TicTacToe/TicTacToe/Shared/NavMenu.razor"
        
     private bool collapseNavMenu = true;
 
