@@ -82,6 +82,13 @@ using TicTacToe.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "/Users/radovansanta/RiderProjects/TicTacToe/TicTacToe/Pages/Index.razor"
+using TicTacToe.Components;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
     {
