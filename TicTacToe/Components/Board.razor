@@ -1,14 +1,39 @@
+<h3>Next player: @(xIsNext ? 'X' : 'O')</h3>
 <div class="board">
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-        <Square />
-    </div>
+    @for (int i = 0; i < 9; i++)
+    {
+        int squareNumber = i;
+        <Square @key=squareNumber
+                value=values[squareNumber]
+                ClickHandler="@(() => HandleClick(squareNumber))"/>
+    }
+</div>
+
+@code {
+    private bool xIsNext;
+    private char[] values = new char[9];
+    protected override void OnInitialized()
+    {
+        values = new char[9]
+        {
+        ' ', ' ', ' ',
+        ' ', ' ', ' ',
+        ' ', ' ', ' '
+        };
+        xIsNext = true;
+    }
+    private void HandleClick(int i)
+    {
+        if (values[i] == char.Parse(" "))
+        {
+            bool xToPlay = xIsNext;
+            Console.Out.WriteLine(xToPlay);
+            values[i] = xToPlay ? 'X' : 'O';
+            Console.Out.WriteLine(values);
+            xIsNext = !xToPlay;
+        }
+    }
+}
 
 <style scoped>
     .board {

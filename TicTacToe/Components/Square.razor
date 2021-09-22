@@ -1,4 +1,10 @@
-<div class="square">O</div>
+<div class="square" @onclick="@ClickHandler">@value</div>
+@functions {
+    [Parameter]
+    public char value { get; set; }
+    [Parameter]
+    public EventCallback ClickHandler { get; set; }
+}
 
 <style scoped>
     .square {
